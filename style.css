@@ -19,7 +19,6 @@ body {
     margin: 20px 0px 0px 0px;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
-    /* grid-auto-columns: 1fr; */
     background-color: black;
     border-radius: 5%;
 }
@@ -30,8 +29,6 @@ body {
     height: 80px;
     border-radius: 50%;
     border: black;
-    
-    /* border: 1px solid rgb(84, 82, 82); */
 }
 .calc-grid > .dark:hover, .orange:hover {
     background-color: rgb(244, 247, 247);
@@ -53,7 +50,22 @@ body {
 .orange {
     background-color: rgb(225, 161, 65);
 }
+.output {
+    grid-column: 1 / -1;
+    padding: 0 40px;
+    font-size: 2rem;
+    color:  rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    word-wrap: break-word; 
+    word-break: break-all; 
 
+}
+#previous {
+    color:rgb(180, 169, 169);
+    font-size: 1.5rem;
+}
 #oblong {
     width: 185px;
     height: 85px;
@@ -62,22 +74,5 @@ body {
     border-radius: 40px;
 }
 #del {
-    font-size: 1.5rem;
-}
-.output {
-    grid-column: 1 / -1;
-    padding: 0 40px;
-    font-size: 2rem;
-    color:  rgb(255, 255, 255);
-    /* background-color: grey; */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    word-wrap: break-word; /* allows break in middle of word */
-    word-break: break-all; /* allows all words to be broken */
-
-}
-#previous {
-    color:rgb(180, 169, 169);
     font-size: 1.5rem;
 }

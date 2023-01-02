@@ -58,7 +58,12 @@ class Calculator {
     }
     display() {
         this.currentOperandElement.innerText = this.currentOperand
-        this.previousOperandElement.innerText = this.previousOperand
+        if(this.operation != null) {
+            this.previousOperandElement.innerText = `${this.previousOperand} ${this.operation} ${this.currentOperand}`
+        }
+        else {
+            this.previousOperandElement.innerText = ''
+        }
     }
 }
 // DOM Elements
