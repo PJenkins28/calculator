@@ -1,3 +1,10 @@
+// DOM Elements
+const numberBtns = document.querySelectorAll('[data-number]') // selects all number buttons
+const operationBtns = document.querySelectorAll('[data-operation]') // selects all operators
+const allClearBtn = document.querySelector('[data-all-clear]') // selects all clear button
+const equalsBtn = document.querySelector('[data-equals]') // selects equals button
+const previousOperandElement = document.querySelector('[data-previous]')
+const currentOperandElement = document.querySelector('[data-current]')
 // add
 function add(a,b) {
     return a + b;
