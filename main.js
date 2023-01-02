@@ -74,6 +74,7 @@ const equalsBtn = document.querySelector('[data-equals]') // selects equals butt
 const previousOperandElement = document.querySelector('[data-previous]')
 const currentOperandElement = document.querySelector('[data-current]')
 const delBtn = document.querySelector('[data-delete]') // delete button
+
 // Creating Calculator object
 const calculator = new Calculator(previousOperandElement,currentOperandElement);
 
@@ -99,6 +100,18 @@ equalsBtn.addEventListener('click', () =>{
         calculator.display()
 })
 
+// Event listener for all clear button
+allClearBtn.addEventListener('click', () => {
+    calculator.clear()
+    calculator.display();
+})
+
+// Event listener for delete button
+delBtn.addEventListener('click', () => {
+    calculator.delete()
+    calculator.display()
+})
+
 // Mathematical functions
 function add(a,b) {
     return a + b;
@@ -114,14 +127,4 @@ function divide(a,b) {
 }
 function oppositeSign(a) {
     return a * -1;
-
 }
-allClearBtn.addEventListener('click', () => {
-    calculator.clear()
-    calculator.display();
-})
-
-delBtn.addEventListener('click', () => {
-    calculator.delete()
-    calculator.display()
-})
